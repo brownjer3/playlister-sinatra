@@ -1,0 +1,11 @@
+<h1> <%=@artist.name%></h1>
+
+<h1> SONGS </h1>
+<% @artist.songs.each do |s| %>
+    <a href="/songs/<%=s.slug%>"><%=s.name%></a>
+<% end %>
+
+<h1> GENRES </h1>
+<% @artist.genres.each do |g|  %>
+    <a href="/genres/<%=g.slug%>"> <%=g.name%> </a>
+<% end %>
